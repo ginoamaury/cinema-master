@@ -109,7 +109,7 @@ opacity: 0;
   height: 100%;
   z-index: 1043;
   position: fixed;
-  outline: none !important;
+  outline: none ;
   -webkit-backface-visibility: hidden; }
 
 .mfp-container {
@@ -175,7 +175,7 @@ opacity: 0;
   display: none; }
 
 .mfp-hide {
-  display: none !important; }
+  display: none ; }
 .mfp-content iframe{
 	width:100%;
 	min-height:500px;
@@ -255,7 +255,7 @@ button::-moz-focus-inner {
 	font-weight: 700;
 }
 .login p{	
-	color:##000000;
+	color:#000000;
 	font-size:14px;
 	text-align:center;
 }
@@ -273,7 +273,7 @@ button::-moz-focus-inner {
 	-o-border-radius: 7px;
 	-ms-border-radius: 7px;
 	font-family: 'Open Sans', sans-serif;
-	outline: none !important;
+	outline: none ;
 	-webkit-appearance: none;
 }
 .signup input[type="text"]{
