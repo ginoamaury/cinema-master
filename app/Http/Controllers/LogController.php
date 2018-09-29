@@ -21,7 +21,7 @@ class LogController extends Controller
      */
     public function index()
     {
-      //  return "estamos en el index del LogController"; //localhost:8000/log
+        //  return "estamos en el index del LogController"; //localhost:8000/log
     }
 
     /**
@@ -42,24 +42,24 @@ class LogController extends Controller
      */
     //ACA TRABAJAREMOS DEL FORMULARIO QUE NOS MANDA DEL INDEX CON EL METODO POST LA INFORMACION
     public function store(LoginRequest $request) { //LoginRequest esta en el request que creamos para las validaciones
-      //llevamos acabo la validacion
-      //usamos el paquete auth y el metodo attempt, nos recibe un array donde le preguntamos si el email y email es igual a lo que nosotros estamos recibiendo y tambm le preguntamos por el password
-      //Si esto es cierto nos redireccionara en el panel de administacion o si no lle enviara un mensaje de error y le mandara al index
+        //llevamos acabo la validacion
+        //usamos el paquete auth y el metodo attempt, nos recibe un array donde le preguntamos si el email y email es igual a lo que nosotros estamos recibiendo y tambm le preguntamos por el password
+        //Si esto es cierto nos redireccionara en el panel de administacion o si no lle enviara un mensaje de error y le mandara al index
 
-      if (Auth::attempt(['email' => $request['email'],'password' => $request['password']])) {
-          return Redirect::to('admin'); //localhost:8000/admin
+        if (Auth::attempt(['email' => $request['email'],'password' => $request['password']])) {
+            return Redirect::to('admin'); //localhost:8000/admin
         }
-          Session::flash('message-errors','Datos Incorrectos'); //caso contrario HACEMOS ENVIAR EL MENSAJE al usuario de error que sus datos son incorrectos el mensaje esta en el index principal
-          return Redirect::to('/'); //si es incorrecto retornara a la raiz de la pagina
+        Session::flash('message-errors','Datos Incorrectos'); //caso contrario HACEMOS ENVIAR EL MENSAJE al usuario de error que sus datos son incorrectos el mensaje esta en el index principal
+        return Redirect::to('/'); //si es incorrecto retornara a la raiz de la pagina
 
-      //return "estamos en el ESTORE del LogController venimos desde le index blade principal donde esta el formulario para el ingreso";
-      //return $request -> email; //como prueba retornamos el email que es enviado del formulario
+        //return "estamos en el ESTORE del LogController venimos desde le index blade principal donde esta el formulario para el ingreso";
+        //return $request -> email; //como prueba retornamos el email que es enviado del formulario
     }
 
     //creamos el metodo logout que especificamos en la ruta que sera para cerrar session
     public function logout(){
-      Auth::logout(); //usamos el paquete Aut nos brinda el metodo logout despues nos redirigimos a la raiz del sitio,
-      return Redirect::to('/');
+        Auth::logout(); //usamos el paquete Aut nos brinda el metodo logout despues nos redirigimos a la raiz del sitio,
+        return Redirect::to('/');
     }
 
     /**
@@ -68,7 +68,7 @@ class LogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(/*$id*/)
     {
         //
     }
@@ -79,7 +79,7 @@ class LogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(/*$id*/)
     {
         //
     }
@@ -91,7 +91,7 @@ class LogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(/*Request $request, $id*/)
     {
         //
     }
@@ -102,7 +102,7 @@ class LogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(/*$id*/)
     {
         //
     }

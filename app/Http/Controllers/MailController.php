@@ -41,7 +41,7 @@ class MailController extends Controller
      */
     public function store(Request $request)
     {        //enviamos los datos que estamos recibiendo y creamos un blade para especificar lo del formulario Y QUE MANDO POR EL REQUEST DE ACA 
-          Mail::send('emails.contact',$request->all(), function($msj){ //especificamos la vista contact dentro de carpeta emails en elmetodo send,  y le decimos que pasemos la informacion en el request sera todo y despues creamos la funcion introducimos el mensaje
+        Mail::send('emails.contact',$request->all(), function($msj){ //especificamos la vista contact dentro de carpeta emails en elmetodo send,  y le decimos que pasemos la informacion en el request sera todo y despues creamos la funcion introducimos el mensaje
             $msj->subject('Correo de Contacto del CINEMA'); //especificamos el subjento
             $msj->to('BrayanMurphyC@gmail.com'); //a donde sera enviado ese correo
         });
@@ -56,7 +56,7 @@ class MailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(/*$id*/)
     {
         //
     }
@@ -67,7 +67,7 @@ class MailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(/*$id*/)
     {
         //
     }
@@ -79,7 +79,7 @@ class MailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(/*Request $request, $id*/)
     {
         //
     }
@@ -90,7 +90,7 @@ class MailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(/*$id*/)
     {
         //
     }
